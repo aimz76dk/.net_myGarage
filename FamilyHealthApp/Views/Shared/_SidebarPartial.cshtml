@@ -1,0 +1,17 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using FamilyHealthApp.Models
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+        
+@if (SignInManager.IsSignedIn(User))
+{
+     <a class="item" asp-action="index" ><i class="home icon"></i>Dashboard</a>
+     <a class="item" asp-action="about" ><i class="id card icon"></i>About</a>
+     <a class="item" asp-action="contact" ><i class="mail outline icon"></i>Contact us</a>
+
+} else {
+
+     <a class="item" asp-action="index" ><i class="home icon"></i>Log in</a>
+     <a class="item" asp-action="register" ><i class="id card icon"></i>Register</a>
+     <a class="item" asp-action="forgotpassword" ><i class="mail outline icon"></i>Forgot password</a>
+}

@@ -1,0 +1,40 @@
+﻿@model LoginViewModel
+@{
+     Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+
+
+<div class="ui raised very padded text container" style="margin-right:5%;">
+     <h2 class="ui header center">App Log in</h2>
+    <form asp-controller="Main" asp-action="Index" method="post" class="ui large form validate-me" role="form">
+
+        <div class="ui stack segment">
+            <div class="field">
+                <div class="ui left icon input">
+                    <i class="user icon"></i>
+                    <input asp-for="Username" placeholder="Username" />
+                    <span asp-validation-for="Username" style="color:red;" ></span>
+                </div>
+            </div>
+            <div class="field">
+                <div class="ui left icon input">
+                    <i class="lock icon"></i>
+                    <input asp-for="Password" placeholder="Password" />
+                    <span asp-validation-for="Password" style="color:red;"></span>
+                </div>
+            </div>
+
+            <div>
+                <button class="ui blue button">
+                    <i class="lock icon"></i>
+                    LOGIN
+                </button>
+            </div>
+
+            <div asp-validation-summary="All" class="ui error" style="color:red;"></div>
+
+        </div>
+        @Html.AntiForgeryToken()
+    </form>
+</div>
+

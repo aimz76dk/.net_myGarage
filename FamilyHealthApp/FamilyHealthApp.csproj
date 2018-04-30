@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <UserSecretsId>User-Secret-ID</UserSecretsId>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.Identity.EntityFramework" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Extensions.SecretManager.Tools" Version="2.0.0" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="2.0.0" />
+    <PackageReference Include="Sendgrid" Version="9.9.0" />
+    <PackageReference Include="SendGrid.Net40" Version="5.1.0" />
+    <PackageReference Include="Npgsql" Version="3.2.6" />
+  </ItemGroup>
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
+    <DotNetCliToolReference Include="Microsoft.Extensions.SecretManager.Tools" Version="2.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Migrations" />
+    <Folder Include="Services\" />
+    <Folder Include="Repository\" />
+    <Folder Include="Models\Entities\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Models\Entities\Login.cs" />
+    <Compile Remove="Models\Entities\Adress.cs" />
+    <Compile Remove="Models\Entities\Person.cs" />
+    <Compile Remove="Models\Entities\Register.cs" />
+    <Compile Remove="Models\Entities\SeedData.cs" />
+    <Compile Remove="Models\ApplicationDbContext.cs" />
+    <Compile Remove="Models\Hoppies.cs" />
+    <Compile Remove="Migrations\20171106222238_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20171106222238_Initial.cs" />
+    <Compile Remove="Controllers\RestController.cs" />
+    <Compile Remove="Models\Individual.cs" />
+    <Compile Remove="Models\Organization.cs" />
+    <Compile Remove="Models\Initializer.cs" />
+    <Compile Remove="Repository\IProfileRepository.cs" />
+    <Compile Remove="Migrations\ProfileContextModelSnapshot.cs" />
+    <Compile Remove="Models\Note.cs" />
+    <Compile Remove="Controllers\HomeController.cs" />
+    <Compile Remove="Models\Person.cs" />
+    <Compile Remove="ViewModels\DashboardViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Views\LoggedIn\EditIndividual.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Views\LoggedIn\EditIndividual.cshtml" />
+    <Content Remove="Views\Main\TestEmail.cshtml" />
+    <Content Remove="Views\LoggedIn\EditOrganization.cshtml" />
+    <Content Remove="Views\LoggedIn\AddOrganization.cshtml" />
+  </ItemGroup>
+</Project>

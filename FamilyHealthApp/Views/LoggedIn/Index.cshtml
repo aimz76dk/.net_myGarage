@@ -1,0 +1,48 @@
+﻿@model IEnumerable<FamilyHealthApp.Models.Car>
+
+
+@{
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+    ViewData["Title"] = "Index";
+}
+
+
+<h1 style="margin-top: 100px;">Welcome to your dashboard</h1>
+
+<a asp-action="Create"><button class="ui primary button">Add new car</button></a>
+
+<table class="ui single line table">
+    <thead>
+        <tr>
+            <th>
+                <p>Make</p>
+            </th>
+            <th>
+                <p>Model</p>
+            </th>
+        <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @item.Make
+            </td>
+            <td>
+                @item.Model 
+            </td>
+            <td>
+                <div class="ui buttons">
+                    <a asp-action="Edit" asp-route-id="@item.CarId"><button class="ui button">Edit</button></a> |
+                    <div class="or"></div>
+                    <a asp-action="Details" asp-route-id="@item.CarId"><button class="ui positive button">See details</button></a> 
+                    <div class="or"></div>
+                   <a asp-action="Delete" asp-route-id="@item.CarId"><button class="ui negative button">Delete</button></a>
+                </div>
+            </td>
+        </tr>
+}   
+    </tbody>
+</table>
+

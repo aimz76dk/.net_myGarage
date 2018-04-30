@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{B77CF0A2-77E4-4FCA-97C6-6564C25AAD6E}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+    <Files>
+      <File FileName="Models/Entities/Car.cs" Line="29" Column="2" />
+      <File FileName="Models/Entities/Comment.cs" Line="22" Column="9" />
+      <File FileName="Controllers/MainController.cs" Line="194" Column="24" />
+      <File FileName="Views/Main/Register.cshtml" Line="1" Column="25" />
+      <File FileName="Views/LoggedIn/Details.cshtml" Line="43" Column="1" />
+      <File FileName="Startup.cs" Line="33" Column="45" />
+      <File FileName="Controllers/CarApiController.cs" Line="10" Column="29" />
+      <File FileName="Views/LoggedIn/Index.cshtml" Line="27" Column="28" />
+      <File FileName="Controllers/LoggedInController.cs" Line="13" Column="16" />
+      <File FileName="Views/LoggedIn/Edit.cshtml" Line="22" Column="42" />
+      <File FileName="Program.cs" Line="16" Column="26" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="Controllers/CommentApiController.cs" line="39" offsetX="517" offsetY="570" expression="comment" liveUpdate="True" />
+    <Watch file="Controllers/CommentController.cs" line="56" offsetX="459" offsetY="825" expression="saveCommentToCar.Car.Comments.[0].CommentId" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+  <MonoDevelop.Ide.ItemProperties.FamilyHealthApp PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>
